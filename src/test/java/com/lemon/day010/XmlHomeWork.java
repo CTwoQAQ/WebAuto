@@ -26,20 +26,12 @@ public class XmlHomeWork {
             Page page = new Page();
             ArrayList<Page> pages = new ArrayList<Page>();
             for (Element element : elements) {
-//                System.out.println(element);
+/*              System.out.println(element);
                 String name = element.getName();
-                String text = element.getText();
-                System.out.println(text);
-                if ("keyword".equals(name)){
-                    page.setKeyword(text);
-                }
-                else if ("by".equals(name)){
-                    page.setKeyword(text);
-                }
-                else if ("value".equals(name)){
-                    page.setKeyword(text);
-
-                }
+                String text = element.getText();*/
+                System.out.println(element.attributeValue("keyword"));
+                System.out.println(element.attributeValue("by"));
+                System.out.println(element.attributeValue("value"));
             }
             System.out.println(page);
 
