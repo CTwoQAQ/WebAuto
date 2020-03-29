@@ -17,18 +17,25 @@ public class HashMapHomeWork {
         list1801.add(student1);
         list1801.add(student2);
         map.put("1801",list1801);
-        for (Student class1801 : list1801) {
-            System.out.println(class1801.getName());
-        }
+//        for (Student class1801 : list1801) {
+//            System.out.println(class1801.getName());
+//        }
         ArrayList<Student> list1802 = new ArrayList<Student>();
         list1802.add(student3);
         list1802.add(student4);
         list1802.add(student5);
         map.put("1802",list1802);
-        for (Student class1802 : list1802) {
-            System.out.println(class1802.getName());
-        }
+//        for (Student class1802 : list1802) {
+//            System.out.println(class1802.getName());
+//        }
         Set<Map.Entry<String, ArrayList<Student>>> entries = map.entrySet();
+        for (Map.Entry<String, ArrayList<Student>> entry : entries) {
+            System.out.println(entry.getKey());
+            ArrayList<Student> students = entry.getValue();
+            for (Student student : students) {
+                System.out.println(student.getName());
+            }
+        }
 
     }
 }
