@@ -1,49 +1,31 @@
 package com.lemon.day010;
 
+import java.util.List;
+
 public class Page {
-    public String keyword;
-    public String by;
-    public String value;
+    private String keyword;
+    private List<Locator> locatorsUnderPage;
+    public Page() {
+    }
+
+    public Page(String keyword, List<Locator> locatorsUnderPage) {
+        this.keyword = keyword;
+        this.locatorsUnderPage = locatorsUnderPage;
+    }
 
     public String getKeyword() {
         return keyword;
-    }
-
-    public Page() {
     }
 
     public void setKeyword(String keyword) {
         this.keyword = keyword;
     }
 
-    public String getBy() {
-        return by;
+    public List<Locator> getLocatorsUnderPage() {
+        return locatorsUnderPage;
     }
 
-    @Override
-    public String toString() {
-        return "Page{" +
-                "keyword='" + keyword + '\'' +
-                ", by='" + by + '\'' +
-                ", value='" + value + '\'' +
-                '}';
-    }
-
-    public void setBy(String by) {
-        this.by = by;
-    }
-
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
-    }
-
-    public Page(String keyword, String by, String value) {
-        this.keyword = keyword;
-        this.by = by;
-        this.value = value;
+    public void setLocatorsUnderPage(List<Locator> locatorsUnderPage) {
+        this.locatorsUnderPage = locatorsUnderPage;
     }
 }
